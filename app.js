@@ -3,7 +3,7 @@ const socket = require("socket.io");
 
 let app = express();
 app.use(express.static("public"));
-let port = 5000;
+let port = process.env.Port || 5000;
 let server = app.listen(port, () => {
     console.log("lisning to prot" + port);
 });
